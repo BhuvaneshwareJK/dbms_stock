@@ -1,0 +1,38 @@
+# ===========================================================================
+#  Streamlit configuration
+#  Premium dark theme: charcoal canvas, gold accents, light text.
+#  Streamlit reads this automatically when the app is launched from the
+#  directory that contains the `.streamlit/` folder.
+# ===========================================================================
+
+[theme]
+# `base` is the starting point Streamlit uses for any value not overridden
+# below (scrollbars, tooltips, code blocks). Forcing "dark" means the OS or
+# browser light-mode preference cannot leak through.
+base = "dark"
+
+primaryColor            = "#d4af37"   # Gold  - buttons, sliders, focus rings
+backgroundColor         = "#121212"   # Charcoal - main canvas
+secondaryBackgroundColor= "#1c1c1c"   # Slightly lifted - sidebar, cards, inputs
+textColor               = "#eaeaea"   # Off-white - easier on the eye than #fff
+
+font = "sans serif"
+
+[server]
+headless = true
+runOnSave = true
+# Guard against oversized CSV uploads if you add an import feature later.
+maxUploadSize = 20
+
+[browser]
+gatherUsageStats = false
+
+[client]
+# Show errors in the browser during development. Set to "none" before you put
+# this in front of anyone else - stack traces can leak schema details.
+showErrorDetails = true
+toolbarMode = "minimal"
+
+[runner]
+magicEnabled = true
+fastReruns = true
